@@ -72,12 +72,12 @@ export default function NoteForm() {
     <>
       <div className="container bg-white w-50 border border-light shadow-sm m-auto p-3">
         <h4 className="w-100 text-center text-dark m-auto">
-          React Not Uygulaması
+        To Do List
         </h4>
         <form onSubmit={handleSubmit}>
           <div className="form-group mb-3">
             <label htmlFor="baslik" className="mb-1">
-              Not Başlığı
+              Note Title
             </label>
             <input
               type="text"
@@ -85,13 +85,13 @@ export default function NoteForm() {
               id="baslik"
               name="baslik"
               onChange={handleChange}
-              placeholder="Not Başlığı"
+              placeholder="Note Title"
               value={data.baslik}
             />
           </div>
           <div className="form-group mb-3">
             <label htmlFor="yazi" className="mb-1">
-              Not
+              Note
             </label>
             <textarea
               className="form-control"
@@ -100,7 +100,7 @@ export default function NoteForm() {
               id="yazi"
               name="yazi"
               value={data.yazi}
-              placeholder="Not"
+              placeholder="Note"
             />
           </div>
           <div className="form-group mb-3">
@@ -111,18 +111,19 @@ export default function NoteForm() {
               onChange={handleChange}
               checked={data.pinned}
             />
-            <span className="ml-2">&nbsp;Favorilere Ekle</span>
+            <span className="ml-2">&nbsp;
+Add to Favorites</span>
           </div>
           <div className="d-flex float-end gap-2">
             <button type="submit" className="btn btn-dark">
-              Kaydet
+            Save
             </button>
           </div>
         </form>
         <div className="container bg-white w-100 border border-light m-auto mt-5 p-3 px-0">
           <div className="row w-100 align-items-center mx-auto mt-3">
             <div className="col-sm-6 px-0">
-              <h4 className="w-100 text-start text-dark m-auto">Notlar</h4>
+              <h4 className="w-100 text-start text-dark m-auto">Notes</h4>
             </div>
             <div className="col-sm-6 px-0">
               <button
